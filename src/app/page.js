@@ -63,6 +63,7 @@ export default function Home() {
             </p>
           </section>
           <section id="experiences">
+            <h3 className="mb-4 text-xl">Experiences</h3>
             {
               experiencesData.map(exp => {
                 return (
@@ -75,6 +76,7 @@ export default function Home() {
             </Link>
           </section>
           <section id="education" className="my-24">
+            <h3 className="mb-4 text-xl">Education</h3>
             {
               educationData.map(education => {
                 return (
