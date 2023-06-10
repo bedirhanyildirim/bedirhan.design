@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 export default function EducationCard({ education }) {
   return (
     <div className="mb-12 transition">

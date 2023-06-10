@@ -95,18 +95,22 @@
   ],
   "languages": [
     {
+      "id": 0,
       "language": "Turkish",
       "level": "Native"
     },
     {
+      "id": 1,
       "language": "English",
       "level": "Proficient"
     },
     {
+      "id": 2,
       "language": "Italian",
       "level": "Basic"
     },
     {
+      "id": 3,
       "language": "Polish",
       "level": "Basic"
     }

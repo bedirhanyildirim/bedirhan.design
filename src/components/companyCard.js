@@ -1,5 +1,3 @@
-'use client'
-
 import Link from 'next/link'
 import ArrowOut from 'public/arrowOut.svg'
 

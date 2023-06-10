@@ -1,13 +1,13 @@
 import Link from 'next/link'
-import TwitterLogo from 'public/twitter.svg'
-import InstagramLogo from 'public/instagram.svg'
 import GithubLogo from 'public/github.svg'
+import TwitterLogo from 'public/twitter.svg'
 import LinkedInLogo from 'public/linkedin.svg'
 import ArrowRight from 'public/arrowRight.svg'
+import InstagramLogo from 'public/instagram.svg'
 import CompanyCard from '@/components/companyCard'
 import EducationCard from '@/components/educationCard'
 import VolunteerCard from '@/components/volunteerCard'
-import { experiences, education, volunteer, languages} from 'public/data.json'
+import { experiences, education, volunteer, languages } from 'public/data.json'
 
 export default function Home() {
   let experiencesData = [...experiences]
@@ -83,7 +83,7 @@ export default function Home() {
             {
               educationData.map(education => {
                 return (
-                  <EducationCard education={education}></EducationCard>
+                  <EducationCard education={education} key={education.id}></EducationCard>
                 )
               })
             }
@@ -93,7 +93,7 @@ export default function Home() {
             {
               volunteerData.map(volunteer => {
                 return (
-                  <VolunteerCard volunteer={volunteer}></VolunteerCard>
+                  <VolunteerCard volunteer={volunteer} key={volunteer.id}></VolunteerCard>
                 )
               })
             }
@@ -103,7 +103,7 @@ export default function Home() {
             <ul className="flex flex-wrap flex-col md:flex-row justify-between w-full">{
               languageData.map(language => {
                 return (
-                  <li className="text-zinc-600">
+                  <li className="text-zinc-600" key={language.id}>
                     <span className="text-black">{language.language}: </span>
                     <span>{language.level}</span>
                   </li>
