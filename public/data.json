@@ -92,5 +92,23 @@
       "field": "Science and Technology",
       "website": "https://www.instagram.com/yeninesilarge/"
     }
+  ],
+  "languages": [
+    {
+      "language": "Turkish",
+      "level": "Native"
+    },
+    {
+      "language": "English",
+      "level": "Proficient"
+    },
+    {
+      "language": "Italian",
+      "level": "Basic"
+    },
+    {
+      "language": "Polish",
+      "level": "Basic"
+    }
   ]
 }

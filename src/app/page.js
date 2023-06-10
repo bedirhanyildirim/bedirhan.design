@@ -7,12 +7,13 @@ import ArrowRight from 'public/arrowRight.svg'
 import CompanyCard from '@/components/companyCard'
 import EducationCard from '@/components/educationCard'
 import VolunteerCard from '@/components/volunteerCard'
-import { experiences, education, volunteer } from 'public/data.json'
+import { experiences, education, volunteer, languages} from 'public/data.json'
 
 export default function Home() {
   let experiencesData = [...experiences]
   let educationData = [...education]
   let volunteerData = [...volunteer]
+  let languageData = [...languages]
   
   return (
     <main className="content">
@@ -97,9 +98,19 @@ export default function Home() {
               })
             }
           </section>
-          <br/>
-          <br/>
-          <br/>
+          <section id="languages" className="my-24">
+            <h3 className="mb-4 text-xl">Language</h3>
+            <ul className="flex flex-wrap flex-col md:flex-row justify-between w-full">{
+              languageData.map(language => {
+                return (
+                  <li className="text-zinc-600">
+                    <span className="text-black">{language.language}: </span>
+                    <span>{language.level}</span>
+                  </li>
+                )
+              })
+            }</ul>
+          </section>
         </content>
       </div>
     </main>
