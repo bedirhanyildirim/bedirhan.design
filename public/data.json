@@ -52,5 +52,25 @@
       "end_date": "6.2019",
       "website": "https://www.turkishairlines.com/"
     }
+  ],
+  "education": [
+    {
+      "id": 0,
+      "school": "Fatih Sultan Mehmet Vakif University",
+      "field": "Computer Engineering",
+      "degree": "Bachelor",
+      "start_year": "2014",
+      "end_year": "2021",
+      "location": "Istanbul"
+    },
+    {
+      "id": 1,
+      "school": "Haydarpaşa Technical High School",
+      "field": "Information Technologies",
+      "degree": "High school",
+      "start_year": "2010",
+      "end_year": "2014",
+      "location": "Istanbul"
+    }
   ]
 }

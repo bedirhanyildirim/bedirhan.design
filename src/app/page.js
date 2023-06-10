@@ -5,10 +5,13 @@ import GithubLogo from 'public/github.svg'
 import LinkedInLogo from 'public/linkedin.svg'
 import ArrowRight from 'public/arrowRight.svg'
 import CompanyCard from '@/components/companyCard'
-import { experiences } from 'public/data.json'
+import EducationCard from '@/components/educationCard'
+import { experiences, education } from 'public/data.json'
 
 export default function Home() {
-  let data = [...experiences]
+  let experiencesData = [...experiences]
+  let educationData = [...education]
+  
   return (
     <main className="content">
       <div className="lg:flex lg:justify-between lg:gap-4">
@@ -49,14 +52,25 @@ export default function Home() {
         </header>
         <content className="pt-24 lg:w-1/2 lg:py-24">
           <section id="experiences">
-            {data.map(exp => {
-              return (
-                <CompanyCard experience={exp} key={exp.id}></CompanyCard>
-              )
-            })}
+            {
+              experiencesData.map(exp => {
+                return (
+                  <CompanyCard experience={exp} key={exp.id}></CompanyCard>
+                )
+              })
+            }
             <Link href="/" className="inline-flex items-center font-medium leading-tight font-semibold text-sky-800 hover:text-sky-600 transition">
               Download Cv <ArrowRight className="w-6 h-6 ml-2 fill-sky-800" />
             </Link>
+          </section>
+          <section id="education" className="my-24">
+            {
+              educationData.map(education => {
+                return (
+                  <EducationCard education={education}></EducationCard>
+                )
+              })
+            }
           </section>
           <br/>
           <br/>
