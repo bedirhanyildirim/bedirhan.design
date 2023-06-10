@@ -72,5 +72,25 @@
       "end_year": "2014",
       "location": "Istanbul"
     }
+  ],
+  "volunteer": [
+    {
+      "id": 0,
+      "organisation": "Türkiye Teknoloji Takımı Foundation",
+      "role": "Mentor",
+      "start_date": "2.2020",
+      "end_date": "1.2021",
+      "field": "Science and Technology",
+      "website": "https://t3vakfi.org/en/"
+    },
+    {
+      "id": 1,
+      "organisation": "Yeni Nesil Arge Student Club",
+      "role": "President",
+      "start_date": "7.2016",
+      "end_date": "6.2020",
+      "field": "Science and Technology",
+      "website": "https://www.instagram.com/yeninesilarge/"
+    }
   ]
 }

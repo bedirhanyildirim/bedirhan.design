@@ -6,11 +6,13 @@ import LinkedInLogo from 'public/linkedin.svg'
 import ArrowRight from 'public/arrowRight.svg'
 import CompanyCard from '@/components/companyCard'
 import EducationCard from '@/components/educationCard'
-import { experiences, education } from 'public/data.json'
+import VolunteerCard from '@/components/volunteerCard'
+import { experiences, education, volunteer } from 'public/data.json'
 
 export default function Home() {
   let experiencesData = [...experiences]
   let educationData = [...education]
+  let volunteerData = [...volunteer]
   
   return (
     <main className="content">
@@ -63,7 +65,7 @@ export default function Home() {
             </p>
           </section>
           <section id="experiences">
-            <h3 className="mb-4 text-xl">Experiences</h3>
+            <h3 className="mb-4 text-xl">Experience</h3>
             {
               experiencesData.map(exp => {
                 return (
@@ -81,6 +83,16 @@ export default function Home() {
               educationData.map(education => {
                 return (
                   <EducationCard education={education}></EducationCard>
+                )
+              })
+            }
+          </section>
+          <section id="volunteer" className="my-24">
+            <h3 className="mb-4 text-xl">Volunteer</h3>
+            {
+              volunteerData.map(volunteer => {
+                return (
+                  <VolunteerCard volunteer={volunteer}></VolunteerCard>
                 )
               })
             }
