@@ -1,6 +1,7 @@
 'use client'
 
-import Link from "next/link";
+import Link from 'next/link'
+import ArrowOut from 'public/arrowOut.svg'
 
 export default function CompanyCard({ experience }) {
   return (
@@ -13,8 +14,8 @@ export default function CompanyCard({ experience }) {
           <h3 className="font-medium leading-snug">
             <div>
               <Link
-                href={experience.website} target="_blank" className="inline-flex items-baseline leading-tight text-zinc-800 text-base">
-                <span>{experience.company} [icon]</span>
+                href={experience.website} target="_blank" className="inline-flex gap-2 items-center leading-tight text-zinc-800 text-base">
+                <span>{experience.company}</span> <ArrowOut className="w-4 h-4 fill-zinc-600" />
               </Link>
             </div>
             <div>
