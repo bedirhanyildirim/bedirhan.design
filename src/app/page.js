@@ -3,6 +3,7 @@ import TwitterLogo from 'public/twitter.svg'
 import InstagramLogo from 'public/instagram.svg'
 import GithubLogo from 'public/github.svg'
 import LinkedInLogo from 'public/linkedin.svg'
+import ArrowRight from 'public/arrowRight.svg'
 import CompanyCard from '@/components/companyCard'
 import { experiences } from 'public/data.json'
 
@@ -54,7 +55,7 @@ export default function Home() {
               )
             })}
             <Link href="/" className="inline-flex items-center font-medium leading-tight font-semibold text-sky-800 hover:text-sky-600 transition">
-              Download Cv [icon]
+              Download Cv <ArrowRight className="w-6 h-6 ml-2 fill-sky-800" />
             </Link>
           </section>
           <br/>
