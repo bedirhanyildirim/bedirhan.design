@@ -17,8 +17,8 @@ export default function Home() {
   
   return (
     <main className="content">
-      <div className="lg:flex lg:justify-between lg:gap-4">
-        <header className="lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-4">
+        <header className="mt-24 lg:mt-0 lg:sticky lg:top-0 lg:flex lg:max-h-screen lg:w-1/2 lg:flex-col lg:justify-between lg:py-24">
           <div>
             <h1 className="text-4xl font-bold tracking-tight text-black sm:text-5xl">
               Bedirhan Yıldırım
@@ -66,7 +66,7 @@ export default function Home() {
             </p>
           </section>
           <section id="experiences">
-            <h3 className="mb-4 text-xl">Experience</h3>
+            <h3 className="hidden md:block mb-4 text-xl">Experience</h3>
             {
               experiencesData.map(exp => {
                 return (
@@ -74,12 +74,14 @@ export default function Home() {
                 )
               })
             }
-            <Link href="/" className="inline-flex items-center font-medium leading-tight font-semibold text-sky-800 hover:text-sky-600 transition">
-              Download Cv <ArrowRight className="w-6 h-6 ml-2 fill-sky-800" />
-            </Link>
+            <div className="w-full flex justify-center lg:justify-start">
+              <Link href="/" className="inline-flex items-center font-medium leading-tight font-semibold text-black lg:text-sky-800 hover:text-sky-600 transition">
+                Download CV <ArrowRight className="block w-6 h-6 ml-2 fill-black lg:fill-sky-800" />
+              </Link>
+            </div>
           </section>
           <section id="education" className="my-24">
-            <h3 className="mb-4 text-xl">Education</h3>
+            <h3 className="hidden md:block mb-4 text-xl">Education</h3>
             {
               educationData.map(education => {
                 return (
@@ -89,7 +91,7 @@ export default function Home() {
             }
           </section>
           <section id="volunteer" className="my-24">
-            <h3 className="mb-4 text-xl">Volunteer</h3>
+            <h3 className="hidden md:block mb-4 text-xl">Volunteer</h3>
             {
               volunteerData.map(volunteer => {
                 return (
@@ -99,13 +101,13 @@ export default function Home() {
             }
           </section>
           <section id="languages" className="my-24">
-            <h3 className="mb-4 text-xl">Language</h3>
-            <ul className="flex flex-wrap flex-col md:flex-row justify-between w-full">{
+            <h3 className="hidden md:block mb-4 text-xl">Language</h3>
+            <ul className="hidden md:flex flex-wrap flex-col md:flex-row justify-between w-full">{
               languageData.map(language => {
                 return (
-                  <li className="text-zinc-600" key={language.id}>
+                  <li className="font-medium leading-snug" key={language.id}>
                     <span className="text-black">{language.language}: </span>
-                    <span>{language.level}</span>
+                    <span className="text-sky-800">{language.level}</span>
                   </li>
                 )
               })
