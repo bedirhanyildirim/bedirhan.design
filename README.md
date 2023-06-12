@@ -1,4 +1,7 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Bedirhan Yildirim Portfolio
+
+This is the repository of [bedirhan.design](https://bedirhan.design/) which is not published yet.
 
 ## Getting Started
 
