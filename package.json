@@ -1,6 +1,7 @@
 {
   "name": "bedirhan.design",
-  "version": "0.1.0",
+  "description": "Bedirhan 'bedcodes' Yildirim project portfolio",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
