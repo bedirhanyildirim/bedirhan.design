@@ -1,18 +1,27 @@
 
 # Bedirhan Yildirim Portfolio
 
-This is the repository of [bedirhan.design](https://bedirhan.design/)
+This is the repository of [bedirhan.design](https://bedirhan.design/) which is the portfolio of my personal projects.
+
+Following technologies are used in this project:
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Firebase](https://firebase.google.com/)
 
 ## Getting Started
 
-First, run the development server:
+### Project setup
+
+First install the npm packages:
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
@@ -22,10 +31,10 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 ### Local Test
 
 ```bash
-npm firebase emulators:start
+firebase emulators:start
 ```
 
 ### Deploy
 ```bash
-npm firebase deploy --only hosting -m "Deploy message"
+firebase deploy --only hosting -m "Deploy message"
 ```
