@@ -72,7 +72,7 @@ export default function Home() {
               })
             }
             <div className="w-full flex justify-center lg:justify-start">
-              <Link href="/" className="inline-flex items-center font-medium leading-tight font-semibold text-black lg:text-sky-800 hover:text-sky-600 transition">
+              <Link href="/bedirhan-yildirim-cv.pdf" target="_blank" className="inline-flex items-center font-medium leading-tight font-semibold text-black lg:text-sky-800 hover:text-sky-600 transition">
                 Download CV <ArrowRight className="block w-6 h-6 ml-2 fill-black lg:fill-sky-800" />
               </Link>
             </div>
