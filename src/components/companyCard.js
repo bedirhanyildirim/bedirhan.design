@@ -31,9 +31,9 @@ export default function CompanyCard({ experience }) {
             {experience.description}
           </p>
           <ul className="mt-2 flex flex-wrap">
-            {experience.skills.map(skill => {
+            {experience.skills.map((skill, key) => {
               return (
-                <li className="mr-1.5 mt-2">
+                <li className="mr-1.5 mt-2" key={key}>
                   <div className="flex items-center rounded-full bg-sky-600/10 px-3 py-1 text-xs font-medium leading-5 text-sky-700">
                     { skill }
                   </div>
