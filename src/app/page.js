@@ -4,16 +4,13 @@ import TwitterLogo from 'public/twitter.svg'
 import LinkedInLogo from 'public/linkedin.svg'
 import ArrowRight from 'public/arrowRight.svg'
 import InstagramLogo from 'public/instagram.svg'
+import Data from '@/components/data'
 import CompanyCard from '@/components/companyCard'
 import EducationCard from '@/components/educationCard'
 import VolunteerCard from '@/components/volunteerCard'
-import { experiences, education, volunteer, languages } from 'public/data.json'
 
 export default function Home() {
-  let experiencesData = [...experiences]
-  let educationData = [...education]
-  let volunteerData = [...volunteer]
-  let languageData = [...languages]
+  let data = Data()
   
   return (
     <main className="content">
@@ -68,7 +65,7 @@ export default function Home() {
           <section id="experiences">
             <h3 className="hidden md:block mb-4 text-xl">Experience</h3>
             {
-              experiencesData.map(exp => {
+              data.experiences.map(exp => {
                 return (
                   <CompanyCard experience={exp} key={exp.id}></CompanyCard>
                 )
@@ -83,7 +80,7 @@ export default function Home() {
           <section id="education" className="my-24">
             <h3 className="hidden md:block mb-4 text-xl">Education</h3>
             {
-              educationData.map(education => {
+              data.education.map(education => {
                 return (
                   <EducationCard education={education} key={education.id}></EducationCard>
                 )
@@ -93,7 +90,7 @@ export default function Home() {
           <section id="volunteer" className="my-24">
             <h3 className="hidden md:block mb-4 text-xl">Volunteer</h3>
             {
-              volunteerData.map(volunteer => {
+              data.volunteer.map(volunteer => {
                 return (
                   <VolunteerCard volunteer={volunteer} key={volunteer.id}></VolunteerCard>
                 )
@@ -103,7 +100,7 @@ export default function Home() {
           <section id="languages" className="my-24">
             <h3 className="hidden md:block mb-4 text-xl">Language</h3>
             <ul className="hidden md:flex flex-wrap flex-col md:flex-row justify-between w-full">{
-              languageData.map(language => {
+              data.languages.map(language => {
                 return (
                   <li className="font-medium leading-snug" key={language.id}>
                     <span className="text-black">{language.language}: </span>
