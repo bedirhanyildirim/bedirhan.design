@@ -38,3 +38,10 @@ firebase emulators:start
 ```bash
 firebase deploy --only hosting -m "Deploy message"
 ```
+
+
+### To Do
+The features I want to add:
+
+- [ ] Projects
+- [ ] Blogs
