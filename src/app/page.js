@@ -88,7 +88,7 @@ export default function Home() {
             }
           </section>
           <section id="volunteer" className="my-24">
-            <h3 className="hidden md:block mb-4 text-xl">Volunteer</h3>
+            <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Volunteer</h3>
             {
               data.volunteer.map(volunteer => {
                 return (
