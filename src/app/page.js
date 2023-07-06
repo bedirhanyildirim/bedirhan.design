@@ -78,7 +78,7 @@ export default function Home() {
             </div>
           </section>
           <section id="education" className="my-24">
-            <h3 className="hidden md:block mb-4 text-xl">Education</h3>
+            <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Education</h3>
             {
               data.education.map(education => {
                 return (
