@@ -28,6 +28,11 @@ Open [http://localhost:3000](http://localhost:3000) with your browser to see the
 
 ## Deploy on Firebase
 
+First build the project:
+```bash
+npm run build
+```
+
 ### Local Test
 
 ```bash
@@ -48,3 +53,6 @@ firebase deploy --only hosting -m "Deploy message"
 - [ ] Dark mode
 - [ ] Projects
 - [ ] Blogs
+- [ ] Mobile footer
+- [ ] Mobile section titles
+- [ ] [Next/Head](https://nextjs.org/docs/pages/api-reference/components/head)
