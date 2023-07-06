@@ -50,7 +50,7 @@ export default function Home() {
             </li>
           </ul>
         </header>
-        <content className="pt-24 lg:w-1/2 lg:py-24">
+        <content className="pt-24 lg:w-1/2">
           <section id="about" className="mb-16 scroll-mt-16 text-zinc-500 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <p className="mb-4">
               With 5 years of professional experience as a software engineer, my focus lies in frontend web development. I have successfully collaborated with both large and small teams, consistently delivering modern solutions by staying abreast of the latest technologies.
