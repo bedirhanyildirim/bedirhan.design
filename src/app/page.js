@@ -63,7 +63,7 @@ export default function Home() {
             </p>
           </section>
           <section id="experiences">
-            <h3 className="hidden md:block mb-4 text-xl">Experience</h3>
+            <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Experience</h3>
             {
               data.experiences.map(exp => {
                 return (
