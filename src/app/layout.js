@@ -1,8 +1,8 @@
 import './globals.css'
 
 export const metadata = {
-  title: 'Bedirhan Design | Welcome',
-  description: 'Bedirhan "bedcodes" Yildirim projects',
+  title: 'Bedirhan Design | Portfolio',
+  description: 'Welcome to Bedirhan "bedcodes" Yildirim projects portfolio',
 }
 
 export default function RootLayout({ children }) {
