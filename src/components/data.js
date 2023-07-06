@@ -9,7 +9,7 @@ export default function Data() {
         "description": "I collaborated with one of the biggest asset management companies in the world, contributing to the client's B2C onboarding application using Angular, while also enhancing their mock server with Node.js Express, and working within an Agile Scrum methodology.",
         "logo_url": "https://media.licdn.com/dms/image/C4D0BAQEE73wQBVodMQ/company-logo_100_100/0/1677598469595?e=1694649600&v=beta&t=si8lCR_Tz-70ID3LJt_66MHHEmjmleazqTBs0UTjw3I",
         "type": "Remote",
-        "skills":  ["Angular", "TypeScript", "Node.js", "Express","React", "Redux","Cypress", "RxJS", "a11y"],
+        "skills":  ["Angular", "TypeScript", "Node.js", "Express","React", "Redux","Cypress", "Jest", "RxJS", "a11y"],
         "start_date": "6.2022",
         "end_date": "5.2023",
         "website": "https://www.epam.com/"
@@ -48,7 +48,7 @@ export default function Data() {
         "description": "I contributed to the redesign project of www.thy.com, utilizing Vue.js, while working within the Scrum framework of the Agile methodology.",
         "logo_url": "https://media.licdn.com/dms/image/C4D0BAQGEfBbouGENQw/company-logo_100_100/0/1677651510531?e=1694649600&v=beta&t=xbEy3F7y5OwCyZOXC4OAs9Fw8D1udxMzprwLDtusl34",
         "type": "Office",
-        "skills":  ["JavaScript", "TypeScript", "Vue.js", "Vuex", "Knockout.js", "jQuery"],
+        "skills":  ["JavaScript", "TypeScript", "Vue.js", "Vuex", "Knockout.js", "jQuery", "Bootstrap"],
         "start_date": "7.2018",
         "end_date": "6.2019",
         "website": "https://www.turkishairlines.com/"
