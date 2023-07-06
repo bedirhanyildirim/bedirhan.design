@@ -10,6 +10,6 @@
 
 @layer components {
   .content {
-    @apply w-full md:max-w-screen-sm lg:max-w-full xl:max-w-screen-lg
+    @apply w-full md:max-w-screen-sm lg:max-w-full xl:max-w-screen-lg hover:cursor-default
   }
 }
