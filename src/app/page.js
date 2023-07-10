@@ -8,6 +8,7 @@ import Data from '@/components/data'
 import CompanyCard from '@/components/companyCard'
 import EducationCard from '@/components/educationCard'
 import VolunteerCard from '@/components/volunteerCard'
+import Navigation from '@/components/navigation'
 
 export default function Home() {
   let data = Data()
@@ -26,6 +27,7 @@ export default function Home() {
             <p className="mt-4 max-w-xs leading-normal text-zinc-500">
               I have extensive experience in web development, design and entrepreneurship.
             </p>
+            <Navigation />
           </div>
           <ul className="ml-1 mt-8 flex items-center">
             <li className="mr-5 text-xs">
