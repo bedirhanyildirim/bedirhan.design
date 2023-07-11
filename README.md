@@ -49,6 +49,7 @@ firebase deploy --only hosting -m "Deploy message"
 
 ### Features
 
+- [x] Navigation
 - [ ] Animations
 - [ ] Dark mode
 - [ ] Projects
