@@ -58,7 +58,7 @@ export default function Home() {
             </li>
           </ul>
         </header>
-        <content className="pt-24 lg:w-1/2">
+        <div className="pt-24 lg:w-1/2">
           <section
             id="about"
             ref={aboutRef}
@@ -126,7 +126,7 @@ export default function Home() {
               })
             }</ul>
           </section>
-        </content>
+        </div>
       </div>
     </main>
   )
