@@ -1,3 +1,6 @@
+'use client'
+
+import { useRef } from 'react'
 import Link from 'next/link'
 import GithubLogo from 'public/github.svg'
 import TwitterLogo from 'public/twitter.svg'
@@ -12,6 +15,9 @@ import Navigation from '@/components/navigation'
 
 export default function Home() {
   let data = Data()
+  const aboutRef = useRef(null)
+  const experiencesRef = useRef(null)
+  const educationRef = useRef(null)
   
   return (
     <main className="content">
@@ -27,7 +33,7 @@ export default function Home() {
             <p className="mt-4 max-w-xs leading-normal text-zinc-500">
               I have extensive experience in web development, design and entrepreneurship.
             </p>
-            <Navigation />
+            <Navigation aboutRef={aboutRef} experiencesRef={experiencesRef} educationRef={educationRef} />
           </div>
           <ul className="ml-1 mt-8 flex items-center">
             <li className="mr-5 text-xs">
@@ -53,7 +59,10 @@ export default function Home() {
           </ul>
         </header>
         <content className="pt-24 lg:w-1/2">
-          <section id="about" className="mb-16 scroll-mt-16 text-zinc-500 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+          <section
+            id="about"
+            ref={aboutRef}
+            className="mb-16 scroll-mt-16 text-zinc-500 md:mb-24 lg:mb-36 lg:scroll-mt-24">
             <p className="mb-4">
               With 5 years of professional experience as a software engineer, my focus lies in frontend web development. I have successfully collaborated with both large and small teams, consistently delivering modern solutions by staying abreast of the latest technologies.
             </p>
@@ -64,7 +73,9 @@ export default function Home() {
               I have a true passion for coding, design, and continuous learning. These interests drive me to stay ahead of industry trends and seek out new opportunities for growth and improvement. With a strong foundation in frontend development and a drive for innovation, I am eager to tackle new challenges and contribute to impactful projects.
             </p>
           </section>
-          <section id="experiences">
+          <section
+            id="experiences"
+            ref={experiencesRef}>
             <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Experience</h3>
             {
               data.experiences.map(exp => {
@@ -79,7 +90,10 @@ export default function Home() {
               </Link>
             </div>
           </section>
-          <section id="education" className="my-24">
+          <section
+            id="education"
+            ref={educationRef}
+            className="my-24">
             <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Education</h3>
             {
               data.education.map(education => {
