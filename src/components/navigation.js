@@ -8,8 +8,12 @@ export default function Navigation({ aboutRef, experiencesRef, educationRef }) {
   const isExperiencesInViewport = useIsInViewport(experiencesRef)
   const isEducationInViewport = useIsInViewport(educationRef)
   
-  const getNavigationClasses = (sectionName) => {
+  const getNavigationItemClasses = (sectionName) => {
     return sectionName === activeNavigationItem ? 'text-xs font-bold uppercase tracking-widest text-sky-800' : 'text-xs font-bold uppercase tracking-widest text-zinc-600 group-hover:text-sky-800 group-focus-visible:text-sky-800'
+  }
+  
+  const getNavigationIndicatorClasses = (sectionName) => {
+    return sectionName === activeNavigationItem ? 'mr-4 h-px w-16 bg-sky-800' : 'mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-sky-800 group-focus-visible:w-16 group-focus-visible:bg-sky-800 motion-reduce:transition-none'
   }
   
   useEffect(() => {
@@ -39,7 +43,8 @@ export default function Navigation({ aboutRef, experiencesRef, educationRef }) {
           onClick={scrollToAbout}
           className="group flex items-center py-3 hover:cursor-pointer text-red-600"
         >
-          <span className={getNavigationClasses('about')}>
+          <span className={getNavigationIndicatorClasses('about')}></span>
+          <span className={getNavigationItemClasses('about')}>
             About
           </span>
         </div>
@@ -49,7 +54,8 @@ export default function Navigation({ aboutRef, experiencesRef, educationRef }) {
           onClick={scrollToExperiences}
           className="group flex items-center py-3 hover:cursor-pointer"
         >
-          <span className={getNavigationClasses('experiences')}>
+          <span className={getNavigationIndicatorClasses('experiences')}></span>
+          <span className={getNavigationItemClasses('experiences')}>
             Experiences
           </span>
         </div>
@@ -59,7 +65,8 @@ export default function Navigation({ aboutRef, experiencesRef, educationRef }) {
           onClick={scrollToEducation}
           className="group flex items-center py-3 hover:cursor-pointer"
         >
-          <span className={getNavigationClasses('education')}>
+          <span className={getNavigationIndicatorClasses('education')}></span>
+          <span className={getNavigationItemClasses('education')}>
             Education
           </span>
         </div>
