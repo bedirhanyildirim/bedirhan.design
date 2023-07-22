@@ -54,6 +54,6 @@ firebase deploy --only hosting -m "Deploy message"
 - [ ] Dark mode
 - [ ] Projects
 - [ ] Blogs
-- [ ] Mobile footer
+- [x] Mobile footer
 - [x] Mobile section titles
 - [ ] [Next/Head](https://nextjs.org/docs/pages/api-reference/components/head)
