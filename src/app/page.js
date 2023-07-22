@@ -76,7 +76,7 @@ export default function Home() {
           <section
             id="experiences"
             ref={experiencesRef}>
-            <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Experience</h3>
+            <h3 className="flex justify-center mb-8 text-xl md:block md:mb-4 lg:mb-8">Experiences</h3>
             {
               data.experiences.map(exp => {
                 return (
@@ -94,7 +94,7 @@ export default function Home() {
             id="education"
             ref={educationRef}
             className="my-24">
-            <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Education</h3>
+            <h3 className="flex justify-center mb-8 text-xl md:block md:mb-4 lg:mb-8">Educations</h3>
             {
               data.education.map(education => {
                 return (
@@ -104,7 +104,7 @@ export default function Home() {
             }
           </section>
           <section id="volunteer" className="my-24">
-            <h3 className="hidden md:block mb-4 lg:mb-8 text-xl">Volunteer</h3>
+            <h3 className="flex justify-center mb-8 text-xl md:block md:mb-4 lg:mb-8">Volunteers</h3>
             {
               data.volunteer.map(volunteer => {
                 return (
@@ -114,8 +114,8 @@ export default function Home() {
             }
           </section>
           <section id="languages" className="my-24">
-            <h3 className="hidden md:block mb-4 text-xl">Language</h3>
-            <ul className="hidden md:flex flex-wrap flex-col md:flex-row justify-between w-full">{
+            <h3 className="flex justify-center mb-8 text-xl md:block md:mb-4 lg:mb-8">Languages</h3>
+            <ul className="flex flex-wrap flex-col md:flex-row justify-between w-full gap-y-2">{
               data.languages.map(language => {
                 return (
                   <li className="font-medium leading-snug" key={language.id}>
