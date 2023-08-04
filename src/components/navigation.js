@@ -9,11 +9,11 @@ export default function Navigation({ aboutRef, experiencesRef, educationRef }) {
   const isEducationInViewport = useIsInViewport(educationRef)
   
   const getNavigationItemClasses = (sectionName) => {
-    return sectionName === activeNavigationItem ? 'text-xs font-bold uppercase tracking-widest text-sky-800' : 'text-xs font-bold uppercase tracking-widest text-zinc-600 group-hover:text-sky-800 group-focus-visible:text-sky-800'
+    return sectionName === activeNavigationItem ? 'text-xs font-bold uppercase tracking-widest text-sky-800 dark:text-sky-400' : 'text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-zinc-300 group-hover:text-sky-800 dark:group-hover:text-sky-400 group-focus-visible:text-sky-800 dark:group-focus-visible:text-sky-400'
   }
   
   const getNavigationIndicatorClasses = (sectionName) => {
-    return sectionName === activeNavigationItem ? 'mr-4 h-px w-16 bg-sky-800' : 'mr-4 h-px w-8 bg-slate-600 transition-all group-hover:w-16 group-hover:bg-sky-800 group-focus-visible:w-16 group-focus-visible:bg-sky-800 motion-reduce:transition-none'
+    return sectionName === activeNavigationItem ? 'mr-4 h-px w-16 bg-sky-800 dark:bg-sky-400' : 'mr-4 h-px w-8 bg-slate-600 dark:bg-slate-300 transition-all group-hover:w-16 group-hover:bg-sky-800 dark:group-hover:bg-sky-400 group-focus-visible:w-16 group-focus-visible:bg-sky-800 dark:group-focus-visible:bg-sky-400 motion-reduce:transition-none'
   }
   
   useEffect(() => {
@@ -41,7 +41,7 @@ export default function Navigation({ aboutRef, experiencesRef, educationRef }) {
       <li>
         <div
           onClick={scrollToAbout}
-          className="group flex items-center py-3 hover:cursor-pointer text-red-600"
+          className="group flex items-center py-3 hover:cursor-pointer"
         >
           <span className={getNavigationIndicatorClasses('about')}></span>
           <span className={getNavigationItemClasses('about')}>

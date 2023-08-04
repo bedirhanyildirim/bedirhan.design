@@ -4,7 +4,7 @@
 
 @layer base {
   html, body, #root {
-    @apply h-full bg-white scroll-smooth;
+    @apply bg-white scroll-smooth dark:bg-zinc-900;
   }
 }
 
