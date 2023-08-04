@@ -6,7 +6,7 @@ import useIsInViewport from '@/hooks/useIsInViewport'
 export default function CompanyCard({ experience }) {
   
   const companyCardRef = useRef()
-  const isCompanyCardInViewport = useIsInViewport(companyCardRef)
+/*  const isCompanyCardInViewport = useIsInViewport(companyCardRef)
   
   useEffect(() => {
     if (isCompanyCardInViewport) {
@@ -16,7 +16,7 @@ export default function CompanyCard({ experience }) {
         element.style.animationDelay = `${experience.id}s`
       }
     }
-  }, [isCompanyCardInViewport])
+  }, [isCompanyCardInViewport])*/
   
   return (
     <div ref={companyCardRef} className="mb-12 relative group hover:cursor-default">

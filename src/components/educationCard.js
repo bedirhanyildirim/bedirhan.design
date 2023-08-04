@@ -3,7 +3,7 @@ import useIsInViewport from '@/hooks/useIsInViewport'
 
 export default function EducationCard({ education }) {
   const educationCardRef = useRef()
-  const isCompanyCardInViewport = useIsInViewport(educationCardRef)
+/*  const isCompanyCardInViewport = useIsInViewport(educationCardRef)
   
   useEffect(() => {
     if (isCompanyCardInViewport) {
@@ -13,7 +13,7 @@ export default function EducationCard({ education }) {
         element.style.animationDelay = `${education.id}s`
       }
     }
-  }, [isCompanyCardInViewport])
+  }, [isCompanyCardInViewport])*/
   
   return (
     <div ref={educationCardRef} className="mb-12 transition group relative hover:cursor-default">
