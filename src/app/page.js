@@ -15,6 +15,7 @@ import CompanyCard from '@/components/companyCard'
 import EducationCard from '@/components/educationCard'
 import VolunteerCard from '@/components/volunteerCard'
 import Navigation from '@/components/navigation'
+import BannerCard from '@/components/bannerCard'
 
 export default function Home() {
   let data = Data()
@@ -62,35 +63,43 @@ export default function Home() {
             </p>
             <Navigation aboutRef={aboutRef} experiencesRef={experiencesRef} educationRef={educationRef} />
           </div>
-          <ul className="ml-1 mt-8 flex items-center">
-            <li className="mr-5 text-xs">
-              <Link href="https://github.com/bedirhanyildirim" target="_blank">
-                <GithubLogo className="fill-zinc-500 dark:fill-zinc-400 transition hover:fill-black dark:hover:fill-white" />
-              </Link>
-            </li>
-            <li className="mr-5 text-xs">
-              <Link href="https://www.linkedin.com/in/bedirhanyildirim" target="_blank">
-                <LinkedInLogo className="fill-zinc-500 dark:fill-zinc-400 transition hover:fill-linkedin dark:hover:fill-linkedin" />
-              </Link>
-            </li>
-            <li className="mr-5 text-xs">
-              <Link href="https://www.upwork.com/freelancers/bedcodes" target="_blank">
-                <UpworkLogo className="fill-zinc-500 dark:fill-zinc-400 transition hover:fill-upwork dark:hover:fill-upwork" />
-              </Link>
-            </li>
-            <li className="text-xs">
-              <button type="button" onClick={toggleDarkMode}>
-                <SunLogo className={`fill-zinc-400 transition hover:fill-white ${!darkMode ? 'hidden' : ''}`} />
-                <MoonLogo className={`fill-zinc-500 transition hover:fill-black ${darkMode ? 'hidden' : ''}`} />
-              </button>
-            </li>
-          </ul>
+          <div>
+            <div className="hidden lg:block lg:my-24">
+              <BannerCard />
+            </div>
+            <ul className="ml-1 mt-8 flex items-center">
+              <li className="mr-5 text-xs">
+                <Link href="https://github.com/bedirhanyildirim" target="_blank">
+                  <GithubLogo className="fill-zinc-500 dark:fill-zinc-400 transition hover:fill-black dark:hover:fill-white" />
+                </Link>
+              </li>
+              <li className="mr-5 text-xs">
+                <Link href="https://www.linkedin.com/in/bedirhanyildirim" target="_blank">
+                  <LinkedInLogo className="fill-zinc-500 dark:fill-zinc-400 transition hover:fill-linkedin dark:hover:fill-linkedin" />
+                </Link>
+              </li>
+              <li className="mr-5 text-xs">
+                <Link href="https://www.twitter.com/bedcodes" target="_blank">
+                  <TwitterLogo className="fill-zinc-500 dark:fill-zinc-400 transition hover:fill-linkedin dark:hover:fill-linkedin" />
+                </Link>
+              </li>
+              <li className="text-xs">
+                <button type="button" onClick={toggleDarkMode}>
+                  <SunLogo className={`fill-zinc-400 transition hover:fill-white ${!darkMode ? 'hidden' : ''}`} />
+                  <MoonLogo className={`fill-zinc-500 transition hover:fill-black ${darkMode ? 'hidden' : ''}`} />
+                </button>
+              </li>
+            </ul>
+          </div>
         </header>
-        <div className="pt-24 lg:w-1/2">
+        <div className="pt-8 md:pt-16 lg:pt-24 lg:w-1/2">
           <section
             id="about"
             ref={aboutRef}
-            className="mb-16 scroll-mt-16 text-zinc-500 dark:text-zinc-400 md:mb-24 lg:mb-36 lg:scroll-mt-24">
+            className="mb-16 scroll-mt-16 text-zinc-500 dark:text-zinc-400 lg:scroll-mt-24">
+            <div className="mb-8 md:mb-16 lg:hidden">
+              <BannerCard />
+            </div>
             <p className="mb-4">
               With 5 years of professional experience as a software engineer, my focus lies in frontend web development. I have successfully collaborated with both large and small teams, consistently delivering modern solutions by staying abreast of the latest technologies.
             </p>
