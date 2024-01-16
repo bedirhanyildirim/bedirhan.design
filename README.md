@@ -1,36 +1,60 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+# Bedirhan Yildirim Portfolio
+
+This is the repository of [bedirhan.design](https://bedirhan.design/) which is the portfolio of my personal projects.
+
+Following technologies are used in this project:
+
+- [Next.js](https://nextjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Firebase Hosting](https://firebase.google.com/)
 
 ## Getting Started
 
-First, run the development server:
+### Project setup
+
+First install the npm packages:
+```bash
+npm install
+```
+
+Then, run the development server:
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Deploy on Firebase
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+First build the project:
+```bash
+npm run build
+```
 
-## Learn More
+### Local Test
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+firebase emulators:start
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Deploy
+```bash
+firebase deploy --only hosting -m "Deploy message"
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## To Do
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### Features
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- [x] Navigation
+- [x] Dark mode
+- [ ] Projects
+- [ ] Blogs
+- [ ] Bookmarks
+- [x] Mobile footer
+- [x] Mobile section titles
+- [ ] [Next/Head](https://nextjs.org/docs/pages/api-reference/components/head)
