@@ -1,5 +1,5 @@
 import { experiences, education, volunteer } from "@/types/resume";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 
 export function ExperienceCard({
@@ -24,7 +24,7 @@ export function ExperienceCard({
                   className="inline-flex gap-2 items-center leading-tight text-zinc-800 dark:text-zinc-200 text-base"
                 >
                   <span>{jobExperience.company}</span>{" "}
-                  <ArrowRight className="w-4 h-4 fill-zinc-600 dark:fill-zinc-300" />
+                  <ArrowUpRight className="w-4 h-4 text-zinc-600 dark:text-zinc-300" />
                 </Link>
               ) : (
                 <span>{jobExperience.company}</span>
@@ -106,7 +106,7 @@ export function VolunteerCard({ volunteer }: { volunteer: volunteer }) {
                 className="inline-flex gap-2 items-center leading-tight text-zinc-800 dark:text-zinc-200 text-base"
               >
                 <span>{volunteer.organisation}</span>{" "}
-                <ArrowRight className="w-4 h-4 fill-zinc-600 dark:fill-zinc-300" />
+                <ArrowUpRight className="w-4 h-4 text-zinc-600 dark:text-zinc-300" />
               </Link>
             </div>
             <div>
