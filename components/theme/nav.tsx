@@ -43,15 +43,14 @@ function ThemeNavItem({ label, href }: { label: string; href: string }) {
     >
       <span
         className={cn(
-          "mr-4 h-px w-8 bg-slate-600 dark:bg-slate-300 transition-all group-hover:w-16 group-hover:bg-sky-800 dark:group-hover:bg-sky-400 group-focus-visible:w-16 group-focus-visible:bg-sky-800 dark:group-focus-visible:bg-sky-400 motion-reduce:transition-none",
-          isActive && "mr-4 h-px w-16 bg-sky-800 dark:bg-sky-400"
+          "mr-4 h-px w-8 bg-slate-600 dark:bg-slate-300 transition-all group-hover:w-16 group-hover:bg-title group-focus-visible:w-16 group-focus-visible:bg-title motion-reduce:transition-none",
+          isActive && "w-16 bg-title dark:bg-title"
         )}
       ></span>
       <span
         className={cn(
-          "text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-zinc-300 group-hover:text-sky-800 dark:group-hover:text-sky-400 group-focus-visible:text-sky-800 dark:group-focus-visible:text-sky-400",
-          isActive &&
-            "text-xs font-bold uppercase tracking-widest text-sky-800 dark:text-sky-400"
+          "text-xs font-bold uppercase tracking-widest text-zinc-600 dark:text-zinc-300 group-hover:text-title group-focus-visible:text-title",
+          isActive && "text-title dark:text-title"
         )}
       >
         {label}

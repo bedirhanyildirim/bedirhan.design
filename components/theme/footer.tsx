@@ -1,7 +1,6 @@
 "use client";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter, Moon, Sun } from 'lucide-react';
 import Link from "next/link";
-import { Moon, Sun } from "lucide-react";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
 
@@ -14,7 +13,7 @@ export default function ThemeFooter() {
         <li>
           <Link href="https://github.com/bedirhanyildirim" target="_blank">
             <Button variant="ghost" size="icon">
-              <Github className="text-zinc-500 dark:text-zinc-400 transition hover:text-black dark:hover:text-white" />
+              <Github className="text-zinc-500 dark:text-zinc-400" />
             </Button>
           </Link>
         </li>
@@ -24,14 +23,14 @@ export default function ThemeFooter() {
             target="_blank"
           >
             <Button variant="ghost" size="icon">
-              <Linkedin className="text-zinc-500 dark:text-zinc-400 transition hover:text-linkedin dark:hover:text-linkedin" />
+              <Linkedin className="text-zinc-500 dark:text-zinc-400" />
             </Button>
           </Link>
         </li>
         <li>
           <Link href="https://www.twitter.com/bedcodes" target="_blank">
             <Button variant="ghost" size="icon">
-              <Twitter className="text-zinc-500 dark:text-zinc-400 transition hover:text-linkedin dark:hover:text-linkedin" />
+              <Twitter className="text-zinc-500 dark:text-zinc-400" />
             </Button>
           </Link>
         </li>
@@ -42,7 +41,7 @@ export default function ThemeFooter() {
               size="icon"
               variant="ghost"
             >
-              <Sun className="text-zinc-400 transition hover:text-white" />
+              <Sun className="fill-white" />
             </Button>
           </li>
         ) : (
@@ -52,7 +51,7 @@ export default function ThemeFooter() {
               size="icon"
               variant="ghost"
             >
-              <Moon className="text-zinc-500 transition hover:text-black" />
+              <Moon className="fill-black" />
             </Button>
           </li>
         )}

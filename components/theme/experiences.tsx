@@ -16,10 +16,10 @@ export default function ThemeExperiences() {
         <Link
           href="/bedirhan-yildirim-cv.pdf"
           target="_blank"
-          className="group inline-flex items-center leading-tight font-semibold text-sky-800 dark:text-sky-500 hover:text-sky-600 transition"
+          className="group inline-flex items-center leading-tight font-semibold text-title dark:text-white hover:text-title/90 transition"
         >
           Download CV{" "}
-          <MoveRight className="block w-6 h-6 ml-2  text-sky-800 dark:text-sky-500 transition transform-gpu group-hover:translate-x-2 group-hover:text-sky-600 dark:group-hover:text-sky-500" />
+          <MoveRight className="block w-6 h-6 ml-2 text-title transition transform-gpu group-hover:text-title/90 group-hover:translate-x-2" />
         </Link>
       </div>
     </>

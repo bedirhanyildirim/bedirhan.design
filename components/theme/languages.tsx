@@ -13,7 +13,7 @@ export default function ThemeLanguages() {
               <span className="text-black dark:text-white">
                 {language.language}:{" "}
               </span>
-              <span className="text-sky-800 dark:text-sky-500">
+              <span className="text-title">
                 {language.level}
               </span>
             </li>
