@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html, body, :root {
+  height: 100%;
+}
+
 @layer base {
   html, body, #root {
     @apply bg-white scroll-smooth dark:bg-zinc-900;

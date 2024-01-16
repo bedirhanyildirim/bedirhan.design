@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import { ThemeProvider } from "@/components/theme/theme-provider";
 
 export const metadata: Metadata = {
   title: "Bedirhan Design | Portfolio",
@@ -14,9 +15,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
-        <div className="w-full flex justify-center px-4 lg:px-20">
-          {children}
-        </div>
+        <ThemeProvider attribute="class" defaultTheme="light">
+          <div className="w-full flex justify-center px-4 lg:px-20">
+            {children}
+          </div>
+        </ThemeProvider>
       </body>
     </html>
   );
