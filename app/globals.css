@@ -2,8 +2,16 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body, :root {
-  height: 100%;
+@layer base {
+  html, body, #root {
+    @apply bg-white scroll-smooth dark:bg-zinc-900;
+  }
+}
+
+@layer components {
+  .content {
+    @apply w-full md:max-w-screen-sm lg:max-w-full xl:max-w-screen-lg hover:cursor-default
+  }
 }
  
 @layer base {
