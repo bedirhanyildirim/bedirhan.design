@@ -1,4 +1,4 @@
-import { experiences, education, volunteer } from "@/types/resume";
+import { Iexperiences, Ieducation, Ivolunteer } from "@/types/resume";
 import { ArrowUpRight } from "lucide-react";
 import Link from "next/link";
 import { Badge } from "@/components/ui/badge";
@@ -6,7 +6,7 @@ import { Badge } from "@/components/ui/badge";
 export function ExperienceCard({
   jobExperience,
 }: {
-  jobExperience: experiences;
+  jobExperience: Iexperiences;
 }) {
   return (
     <div className="mb-12 relative group hover:cursor-default">
@@ -58,7 +58,7 @@ export function ExperienceCard({
   );
 }
 
-export function EducationCard({ education }: { education: education }) {
+export function EducationCard({ education }: { education: Ieducation }) {
   return (
     <div className="mb-12 transition group relative hover:cursor-default">
       <div className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100">
@@ -84,7 +84,7 @@ export function EducationCard({ education }: { education: education }) {
   );
 }
 
-export function VolunteerCard({ volunteer }: { volunteer: volunteer }) {
+export function VolunteerCard({ volunteer }: { volunteer: Ivolunteer }) {
   return (
     <div className="mb-12 transition group relative hover:cursor-default">
       <div className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100">
