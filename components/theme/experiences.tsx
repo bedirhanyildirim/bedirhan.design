@@ -1,4 +1,4 @@
-import { getExperiences } from "@/lib/resume";
+import { experiences } from "@/lib/resume";
 import { ExperienceCard } from "@/components/theme/card";
 import Link from "next/link";
 import { MoveRight } from "lucide-react";
@@ -9,7 +9,7 @@ export default function ThemeExperiences() {
       <h3 className="flex justify-center mb-8 text-xl text-black dark:text-white md:block md:mb-4 lg:mb-8">
         Experiences
       </h3>
-      {getExperiences().map((exp) => {
+      {experiences.map((exp) => {
         return <ExperienceCard key={exp.id} jobExperience={exp} />;
       })}
       <div className="w-full flex justify-center lg:justify-start">

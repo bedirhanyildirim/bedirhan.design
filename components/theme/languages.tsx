@@ -1,4 +1,4 @@
-import { getLanguages } from "@/lib/resume";
+import { languages } from "@/lib/resume";
 
 export default function ThemeLanguages() {
   return (
@@ -7,7 +7,7 @@ export default function ThemeLanguages() {
         Languages
       </h3>
       <ul className="flex flex-wrap flex-col md:flex-row justify-between w-full gap-y-2">
-        {getLanguages().map((language) => {
+        {languages.map((language) => {
           return (
             <li className="font-medium leading-snug" key={language.id}>
               <span className="text-black dark:text-white">

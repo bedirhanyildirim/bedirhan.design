@@ -2,24 +2,12 @@
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { cn } from "@/lib/utils";
-
-const navRoutes = [
-  {
-    href: "/",
-    label: "About Me",
-  },
-  {
-    href: "/blog",
-    label: "Blog",
-  },
-];
+import { navigation } from "@/lib/navigation";
 
 export default function ThemeNav() {
-  const routes = navRoutes;
-
   return (
     <ul className="hidden lg:block mt-16 w-max">
-      {routes.map((route) => (
+      {navigation.map((route) => (
         <li key={route.label}>
           <ThemeNavItem href={route.href} label={route.label} />
         </li>

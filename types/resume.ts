@@ -1,4 +1,4 @@
-export type experiences = {
+export type Iexperiences = {
   id: number;
   company: string;
   title: string;
@@ -12,7 +12,7 @@ export type experiences = {
   website: string;
 };
 
-export type education = {
+export type Ieducation = {
   id: number;
   school: string;
   field: string;
@@ -22,7 +22,7 @@ export type education = {
   location: string;
 };
 
-export type volunteer = {
+export type Ivolunteer = {
   id: number;
   organisation: string;
   role: string;
@@ -32,7 +32,7 @@ export type volunteer = {
   website: string;
 };
 
-export type languages = {
+export type Ilanguages = {
   id: number;
   language: string;
   level: string;

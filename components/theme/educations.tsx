@@ -1,4 +1,4 @@
-import { getEducations } from "@/lib/resume";
+import { educations } from "@/lib/resume";
 import { EducationCard } from "@/components/theme/card";
 
 export default function ThemeEducations() {
@@ -7,7 +7,7 @@ export default function ThemeEducations() {
       <h3 className="flex justify-center mb-8 text-xl text-black dark:text-white md:block md:mb-4 lg:mb-8">
         Educations
       </h3>
-      {getEducations().map((education) => {
+      {educations.map((education) => {
         return (
           <EducationCard
             education={education}
