@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
+import { ThemeFooterMobile } from "@/components/theme/footer";
 
 export const metadata: Metadata = {
   title: "Bedirhan Design | Portfolio",
@@ -19,6 +20,7 @@ export default function RootLayout({
           <div className="w-full flex justify-center px-4 lg:px-20">
             {children}
           </div>
+          <ThemeFooterMobile />
         </ThemeProvider>
       </body>
     </html>
