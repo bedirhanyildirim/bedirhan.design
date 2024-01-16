@@ -7,7 +7,8 @@ Following technologies are used in this project:
 
 - [Next.js](https://nextjs.org/)
 - [Tailwind CSS](https://tailwindcss.com/)
-- [Firebase](https://firebase.google.com/)
+- [shadcn/ui](https://ui.shadcn.com/)
+- [Firebase Hosting](https://firebase.google.com/)
 
 ## Getting Started
 
@@ -50,11 +51,10 @@ firebase deploy --only hosting -m "Deploy message"
 ### Features
 
 - [x] Navigation
-- [ ] Hire me banner
-- [ ] Animations
 - [x] Dark mode
 - [ ] Projects
 - [ ] Blogs
+- [ ] Bookmarks
 - [x] Mobile footer
 - [x] Mobile section titles
 - [ ] [Next/Head](https://nextjs.org/docs/pages/api-reference/components/head)
