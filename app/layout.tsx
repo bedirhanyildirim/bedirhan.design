@@ -1,7 +1,9 @@
 import type { Metadata } from "next";
-import "./globals.css";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeFooterMobile } from "@/components/theme/footer";
+import { GoogleTagManager } from "@next/third-parties/google";
+import { GTM_ID } from "@/lib/meta";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Bedirhan Design | Portfolio",
@@ -23,6 +25,7 @@ export default function RootLayout({
           <ThemeFooterMobile />
         </ThemeProvider>
       </body>
+      <GoogleTagManager gtmId={GTM_ID} />
     </html>
   );
 }
