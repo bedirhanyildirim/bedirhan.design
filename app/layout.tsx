@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { ThemeProvider } from "@/components/theme/theme-provider";
 import { ThemeFooterMobile } from "@/components/theme/footer";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { GTM_ID } from "@/lib/meta";
+import { GA_ID } from "@/lib/meta";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -25,7 +25,7 @@ export default function RootLayout({
           <ThemeFooterMobile />
         </ThemeProvider>
       </body>
-      <GoogleTagManager gtmId={GTM_ID} />
+      <GoogleTagManager gtmId={GA_ID} />
     </html>
   );
 }
