@@ -51,10 +51,13 @@ firebase deploy --only hosting -m "Deploy message"
 ### Features
 
 - [x] Navigation
+- [ ] Mobile navigation
 - [x] Dark mode
-- [ ] Projects
-- [ ] Blogs
-- [ ] Bookmarks
-- [x] Mobile footer
-- [x] Mobile section titles
-- [ ] [Next/Head](https://nextjs.org/docs/pages/api-reference/components/head)
+- [ ] Projects Page
+- [ ] Blog Page
+- [ ] Bookmarks Page
+- [x] Sport Page
+- [ ] Display GPX data on map for running exercises
+- [ ] Redesign mobile footer
+- [ ] Integrate custom svg icons
+- [ ] SEO [Next/Head](https://nextjs.org/docs/pages/api-reference/components/head)
