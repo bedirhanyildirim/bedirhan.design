@@ -19,4 +19,10 @@ export const sportHistory: ISport[] = [
     duration: 4000,
     target: "fullbody",
   },
+  {
+    date: new Date(2024, 0, 25, 17),
+    type: "gym",
+    duration: 5100,
+    target: "fullbody",
+  },
 ];
