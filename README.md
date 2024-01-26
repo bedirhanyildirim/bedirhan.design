@@ -51,7 +51,7 @@ firebase deploy --only hosting -m "Deploy message"
 ### Features
 
 - [x] Navigation
-- [ ] Mobile navigation
+- [x] Mobile navigation
 - [x] Dark mode
 - [ ] Projects Page
 - [ ] Blog Page
