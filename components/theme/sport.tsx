@@ -10,7 +10,7 @@ export default function ThemeSport() {
         <span className="font-bold">{sportHistory.length}</span> exercises in
         this year
       </h3>
-      <div className="flex flex-col">
+      <div className="flex flex-col gap-10">
         {sportHistory
           .sort((a, b) => b.date.getTime() - a.date.getTime())
           .map((sport, index) => {
@@ -27,17 +27,24 @@ export default function ThemeSport() {
 
 const ThemeSportGym = ({ gymExercise }: { gymExercise: ISport & IGym }) => {
   return (
-    <div className="mb-12 transition group relative hover:cursor-default">
+    <div className="transition group relative hover:cursor-default">
       <div className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100">
-        <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 sm:col-span-2 whitespace-nowrap">
-          {gymExercise.date.toLocaleDateString("en-GB")}
+        <header className="flex sm:flex-col gap-1 z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 sm:col-span-2 whitespace-nowrap">
+          <span>{gymExercise.date.toLocaleDateString("en-GB")}</span>
+          <span className="sm:hidden">-</span>
+          <span>
+            {gymExercise.date.getHours()}:
+            {gymExercise.date.getMinutes() > 10
+              ? gymExercise.date.getMinutes()
+              : "0" + gymExercise.date.getMinutes()}
+          </span>
         </header>
         <div className="z-10 sm:col-span-6">
           <h3 className="font-medium leading-snug">
             <span className="text-zinc-800 dark:text-zinc-200 capitalize">
               {gymExercise.type}
             </span>
-            <div className="flex gap-2 mt-1">
+            <div className="flex gap-2 mt-2">
               <Badge variant="outline">
                 <Clock size={16} className="mr-1" />
                 {convertSeconds(gymExercise.duration)}
@@ -60,17 +67,24 @@ const ThemeSportRunning = ({
   runningExercise: ISport & IRun;
 }) => {
   return (
-    <div className="mb-12 transition group relative hover:cursor-default">
+    <div className="transition group relative hover:cursor-default">
       <div className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100">
-        <header className="z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 sm:col-span-2 whitespace-nowrap">
-          {runningExercise.date.toLocaleDateString("en-GB")}
+        <header className="flex sm:flex-col gap-1 z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 sm:col-span-2 whitespace-nowrap">
+          <span>{runningExercise.date.toLocaleDateString("en-GB")}</span>
+          <span className="sm:hidden">-</span>
+          <span>
+            {runningExercise.date.getHours()}:
+            {runningExercise.date.getMinutes() > 10
+              ? runningExercise.date.getMinutes()
+              : "0" + runningExercise.date.getMinutes()}
+          </span>
         </header>
         <div className="z-10 sm:col-span-6">
           <h3 className="font-medium leading-snug">
             <span className="text-zinc-800 dark:text-zinc-200 capitalize">
               {runningExercise.type}
             </span>
-            <div className="flex gap-2 mt-1">
+            <div className="flex gap-2 mt-2">
               <Badge variant="outline">
                 <Clock size={16} className="mr-1" />
                 {convertSeconds(runningExercise.duration)}
