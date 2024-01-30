@@ -37,4 +37,10 @@ export const sportHistory: ISport[] = [
     distance: 3010,
     duration: 1125,
   },
+  {
+    date: new Date(2024, 0, 30, 19, 45),
+    type: "gym",
+    duration: 3000,
+    target: "push",
+  },
 ];
