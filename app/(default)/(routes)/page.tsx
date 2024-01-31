@@ -8,7 +8,7 @@ export default function Home() {
     <>
       <section
         id="about"
-        className="mb-16 scroll-mt-16 text-zinc-500 dark:text-zinc-400 lg:scroll-mt-24"
+        className="text-zinc-500 dark:text-zinc-400 lg:scroll-mt-24"
       >
         <p className="mb-4">
           I have extensive experience in web development, design and
@@ -26,7 +26,7 @@ export default function Home() {
           tackle new challenges and contribute to impactful projects.
         </p>
       </section>
-      <section id="experiences">
+      <section id="experiences" className="my-24">
         <ThemeExperiences />
       </section>
       <section id="education" className="my-24">
@@ -35,7 +35,7 @@ export default function Home() {
       <section id="volunteer" className="my-24">
         <ThemeVolunteers />
       </section>
-      <section id="languages" className="my-24">
+      <section id="languages" className="mt-24 lg:my-24">
         <ThemeLanguages />
       </section>
     </>
