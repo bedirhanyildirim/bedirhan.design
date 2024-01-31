@@ -7,7 +7,7 @@ import { Button } from "@/components/ui/button";
 
 export default function ThemeNav() {
   return (
-    <ul className="mt-8 lg:mt-16 w-full flex lg:flex-col gap-4 lg:gap-0">
+    <ul className="mt-8 lg:mt-16 w-fit flex lg:flex-col gap-4 lg:gap-0">
       {navigation.map((route) => (
         <li key={route.label}>
           <ThemeNavItem href={route.href} label={route.label} />
