@@ -11,16 +11,12 @@ export default function Home() {
         className="mb-16 scroll-mt-16 text-zinc-500 dark:text-zinc-400 lg:scroll-mt-24"
       >
         <p className="mb-4">
-          With 5 years of professional experience as a software engineer, my
-          focus lies in frontend web development. I have successfully
-          collaborated with both large and small teams, consistently delivering
-          modern solutions by staying abreast of the latest technologies.
-        </p>
-        <p className="mb-4">
-          As an entrepreneur, I have had the opportunity to work closely with
-          startups, leveraging my coding and design expertise to contribute to
-          their success. Throughout these experiences, I have honed my skills in
-          creating compelling and user-friendly interfaces for web applications.
+          I have extensive experience in web development, design and
+          entrepreneurship. With 5 years of professional experience as a
+          software engineer, my focus lies in frontend web development. I have
+          successfully collaborated with both large and small teams,
+          consistently delivering modern solutions by staying abreast of the
+          latest technologies.
         </p>
         <p>
           I have a true passion for coding, design, and continuous learning.

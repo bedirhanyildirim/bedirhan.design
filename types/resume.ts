@@ -4,7 +4,7 @@ export type Iexperiences = {
   title: string;
   location: string;
   description: string;
-  logo_url: string;
+  logo_url?: string;
   type: string;
   skills: string[];
   start_date: string;

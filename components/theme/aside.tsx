@@ -9,12 +9,8 @@ export default function ThemeAside() {
           Bedirhan Yildirim
         </h1>
         <h2 className="mt-3 text-lg font-medium tracking-tight text-black sm:text-xl dark:text-white">
-          Sr. Frontend Web Developer
+          Software Engineer & Entrepreneur
         </h2>
-        <p className="mt-4 max-w-xs leading-normal text-zinc-500 dark:text-zinc-400">
-          I have extensive experience in web development, design and
-          entrepreneurship.
-        </p>
         <ThemeNav />
       </div>
       <ThemeFooter />
