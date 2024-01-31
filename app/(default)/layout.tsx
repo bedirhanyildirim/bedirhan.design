@@ -5,7 +5,7 @@ const DefaultLayout = ({ children }: { children: React.ReactNode }) => {
     <div className="content">
       <div className="flex flex-col lg:flex-row lg:justify-between lg:gap-4">
         <ThemeAside />
-        <main className="pt-8 md:pt-16 lg:pt-24 lg:w-1/2">{children}</main>
+        <main className="py-8 lg:pt-24 lg:py-0 lg:w-1/2">{children}</main>
       </div>
     </div>
   );
