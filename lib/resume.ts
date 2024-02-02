@@ -7,8 +7,20 @@ import {
 
 export const experiences: Iexperiences[] = [
   {
-    id: 0,
-    company: "EPAM Systems Poland",
+    id: 4,
+    company: "Upwork",
+    title: "Software Engineer",
+    location: "Krakow, Poland",
+    description: "I worked as a freelancer Frontend Web Developer.",
+    type: "Remote",
+    skills: ["React", "Next.js", "Remix.js", "Tailwind", "TypeScript"],
+    start_date: "6.2023",
+    end_date: "12.2023",
+    website: "https://www.upwork.com/freelancers/~0142975d9f6689e77d",
+  },
+  {
+    id: 3,
+    company: "EPAM Systems",
     title: "Software Engineer",
     location: "Krakow, Poland",
     description:
@@ -33,9 +45,9 @@ export const experiences: Iexperiences[] = [
     website: "https://www.epam.com/",
   },
   {
-    id: 1,
-    company: "Wash Out Srl",
-    title: "Frontend Web Developer",
+    id: 2,
+    company: "Wash Out",
+    title: "Software Engineer",
     location: "Milan, Italy",
     description:
       "I developed the redesign project of the B2C website and contributed to the redesign project of the admin dashboard, both utilizing Vue.js, while working within the Scrum framework of the Agile methodology.",
@@ -48,9 +60,9 @@ export const experiences: Iexperiences[] = [
     website: "https://www.washout-app.com/",
   },
   {
-    id: 2,
-    company: "Ariston Thermo Group",
-    title: "ICT Digital Solutions Specialist",
+    id: 1,
+    company: "Ariston Group",
+    title: "Digital Solutions Specialist",
     location: "Fabriano, Italy",
     description:
       "I was accepted into the ICT e-Career program, alongside 13 other students from around the world, and during this time, I followed the renovation application project for web and mobile platforms at Elco Switzerland and Germany, contributing to the UI & UX improvement of the applications while providing technical support on Google Play Store and App Store Connect for all projects. Additionally, I developed a backend application using Node.js to collect metadata and statistics about the mobile applications from both stores. As a result of my performance, I was promoted to a full-time specialist at the conclusion of the ICT e-Career program.",
@@ -70,9 +82,9 @@ export const experiences: Iexperiences[] = [
     website: "https://www.ariston.com/",
   },
   {
-    id: 3,
+    id: 0,
     company: "Turkish Airlines",
-    title: "Frontend Web Developer",
+    title: "Software Engineer",
     location: "Istanbul, Turkiye",
     description:
       "I contributed to the redesign project of www.thy.com, utilizing Vue.js, while working within the Scrum framework of the Agile methodology.",

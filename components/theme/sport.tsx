@@ -7,8 +7,7 @@ export default function ThemeSport() {
   return (
     <>
       <h3 className="flex justify-center mb-8 text-xl text-black dark:text-white md:block md:mb-4 lg:mb-8">
-        <span className="font-bold">{sportHistory.length}</span> exercises in
-        this year
+        <span className="font-bold text-title mr-1 md:mr-0">{sportHistory.length}</span> exercises in 2024
       </h3>
       <div className="flex flex-col gap-10">
         {sportHistory
@@ -115,13 +114,7 @@ const convertSeconds = (seconds: number): string => {
   const hourString = hours > 0 ? `${hours}h` : "";
   const minuteString = minutes > 0 ? `${minutes}m` : "";
 
-  if (hours > 0) {
-    return `${hourString}${minuteString && `:${minuteString}`}`;
-  } else if (!hours && minutes > 0) {
-    return `${minuteString}`;
-  }
-
-  return "";
+  return hours > 0 ? `${hourString}${minuteString && ` ${minuteString}`}` : `${minuteString}`;
 };
 
 const calculatePace = (duration: number, distance: number): string => {
