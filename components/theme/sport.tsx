@@ -1,16 +1,63 @@
+"use client";
+
 import { sportHistory } from "@/data/sport/history";
 import { IGym, IRun, ISport } from "@/types/sport";
 import { Clock, Dumbbell, Gauge, LandPlot } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "../ui/button";
+import { useState } from "react";
 
 export default function ThemeSport() {
+  const [exercises, setExercises] = useState(sportHistory);
+  const [selectedFilter, setSelectedFilter] = useState("all");
+
   return (
     <>
-      <h3 className="flex justify-center mb-8 text-xl text-black dark:text-white md:block md:mb-4 lg:mb-8">
-        <span className="font-bold text-title mr-1 md:mr-0">{sportHistory.length}</span> exercises in 2024
-      </h3>
+      <div className="mb-8 md:mb-4 lg:mb-8 flex items-center">
+        <h3 className="w-full flex justify-center text-xl text-black dark:text-white md:block">
+          <span className="font-bold text-title mr-1 md:mr-0">
+            {sportHistory.length}
+          </span> exercises in 2024
+        </h3>
+        <div className="w-full flex gap-2 items-center">
+          <Button
+            variant={selectedFilter === "all" ? "default" : "secondary"}
+            size="sm"
+            onClick={() => {
+              setSelectedFilter("all");
+              setExercises(sportHistory);
+            }}
+          >
+            All
+          </Button>
+          <Button
+            variant={selectedFilter === "gym" ? "default" : "secondary"}
+            size="sm"
+            onClick={() => {
+              setSelectedFilter("gym");
+              setExercises(
+                sportHistory.filter((sport) => sport.type === "gym")
+              );
+            }}
+          >
+            Gym
+          </Button>
+          <Button
+            variant={selectedFilter === "running" ? "default" : "secondary"}
+            size="sm"
+            onClick={() => {
+              setSelectedFilter("running");
+              setExercises(
+                sportHistory.filter((sport) => sport.type === "running")
+              );
+            }}
+          >
+            Running
+          </Button>
+        </div>
+      </div>
       <div className="flex flex-col gap-10">
-        {sportHistory
+        {exercises
           .sort((a, b) => b.date.getTime() - a.date.getTime())
           .map((sport, index) => {
             if (sport.type === "gym") {
@@ -114,7 +161,9 @@ const convertSeconds = (seconds: number): string => {
   const hourString = hours > 0 ? `${hours}h` : "";
   const minuteString = minutes > 0 ? `${minutes}m` : "";
 
-  return hours > 0 ? `${hourString}${minuteString && ` ${minuteString}`}` : `${minuteString}`;
+  return hours > 0
+    ? `${hourString}${minuteString && ` ${minuteString}`}`
+    : `${minuteString}`;
 };
 
 const calculatePace = (duration: number, distance: number): string => {
