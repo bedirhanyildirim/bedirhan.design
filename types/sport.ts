@@ -4,7 +4,7 @@
 export type ISport = {
   date: Date;
   duration: number;
-} & (IGym | IRun);
+} & (IGym | IRun | IBox);
 
 export type IGym = {
   type: "gym";
@@ -19,3 +19,7 @@ export type IRun = {
   distance: number;
   mapURL?: "string";
 };
+
+export type IBox = {
+  type: "boxing";
+}
