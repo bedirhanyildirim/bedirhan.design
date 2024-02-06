@@ -1,7 +1,7 @@
 "use client";
 
 import { sportHistory } from "@/data/sport/history";
-import { IGym, IRun, ISport } from "@/types/sport";
+import { IBox, IGym, IRun, ISport } from "@/types/sport";
 import { Clock, Dumbbell, Gauge, LandPlot } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "../ui/button";
@@ -64,12 +64,46 @@ export default function ThemeSport() {
               return <ThemeSportGym key={index} gymExercise={sport} />;
             } else if (sport.type === "running") {
               return <ThemeSportRunning key={index} runningExercise={sport} />;
+            } else if (sport.type === "boxing") {
+              return <ThemeSportBox key={index} boxExercise={sport} />;
             }
           })}
       </div>
     </>
   );
 }
+
+const ThemeSportBox = ({ boxExercise }: { boxExercise: ISport & IBox }) => {
+  return (
+    <div className="transition group relative hover:cursor-default">
+      <div className="relative grid pb-1 transition-all sm:grid-cols-8 sm:gap-8 md:gap-4 lg:hover:!opacity-100">
+        <header className="flex sm:flex-col gap-1 z-10 mb-2 mt-1 text-xs font-semibold uppercase tracking-wide text-slate-500 dark:text-slate-400 sm:col-span-2 whitespace-nowrap">
+          <span>{boxExercise.date.toLocaleDateString("en-GB")}</span>
+          <span className="sm:hidden">-</span>
+          <span>
+            {boxExercise.date.getHours()}:
+            {boxExercise.date.getMinutes() > 10
+              ? boxExercise.date.getMinutes()
+              : "0" + boxExercise.date.getMinutes()}
+          </span>
+        </header>
+        <div className="z-10 sm:col-span-6">
+          <h3 className="font-medium leading-snug">
+            <span className="text-zinc-800 dark:text-zinc-200 capitalize">
+              {boxExercise.type}
+            </span>
+            <div className="flex gap-2 mt-2">
+              <Badge variant="outline">
+                <Clock size={16} className="mr-1" />
+                {convertSeconds(boxExercise.duration)}
+              </Badge>
+            </div>
+          </h3>
+        </div>
+      </div>
+    </div>
+  );
+};
 
 const ThemeSportGym = ({ gymExercise }: { gymExercise: ISport & IGym }) => {
   return (
