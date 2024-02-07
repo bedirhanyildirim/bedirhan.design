@@ -19,9 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <ThemeProvider attribute="class" defaultTheme="light">
-          <div className="w-full flex justify-center px-4 lg:px-20">
-            {children}
-          </div>
+          <div className="w-full">{children}</div>
           <ThemeFooterMobile />
         </ThemeProvider>
       </body>
