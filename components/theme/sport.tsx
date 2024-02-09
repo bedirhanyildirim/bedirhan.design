@@ -1,15 +1,51 @@
 "use client";
 
+import { useState } from "react";
+import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { sportHistory } from "@/data/sport/history";
 import { IBox, IGym, IRun, ISport } from "@/types/sport";
 import { Clock, Dumbbell, Gauge, LandPlot } from "lucide-react";
-import { Badge } from "@/components/ui/badge";
-import { Button } from "../ui/button";
-import { useState } from "react";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuLabel,
+  DropdownMenuRadioGroup,
+  DropdownMenuRadioItem,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu";
+
+const exerciseTypes = [
+  {
+    value: "all",
+    label: "All",
+  },
+  {
+    value: "gym",
+    label: "Gym",
+  },
+  {
+    value: "running",
+    label: "Running",
+  },
+  {
+    value: "boxing",
+    label: "Boxing",
+  },
+];
 
 export default function ThemeSport() {
   const [exercises, setExercises] = useState(sportHistory);
   const [selectedFilter, setSelectedFilter] = useState("all");
+
+  const filterExercises = (type: string) => {
+    if (type === "all") {
+      setExercises(sportHistory);
+    } else {
+      setExercises(sportHistory.filter((sport) => sport.type === type));
+    }
+  };
 
   return (
     <>
@@ -19,41 +55,32 @@ export default function ThemeSport() {
             {sportHistory.length}
           </span> exercises in 2024
         </h3>
-        <div className="w-full flex gap-2 items-center">
-          <Button
-            variant={selectedFilter === "all" ? "default" : "secondary"}
-            size="sm"
-            onClick={() => {
-              setSelectedFilter("all");
-              setExercises(sportHistory);
-            }}
-          >
-            All
-          </Button>
-          <Button
-            variant={selectedFilter === "gym" ? "default" : "secondary"}
-            size="sm"
-            onClick={() => {
-              setSelectedFilter("gym");
-              setExercises(
-                sportHistory.filter((sport) => sport.type === "gym")
-              );
-            }}
-          >
-            Gym
-          </Button>
-          <Button
-            variant={selectedFilter === "running" ? "default" : "secondary"}
-            size="sm"
-            onClick={() => {
-              setSelectedFilter("running");
-              setExercises(
-                sportHistory.filter((sport) => sport.type === "running")
-              );
-            }}
-          >
-            Running
-          </Button>
+        <div className="">
+          <DropdownMenu>
+            <DropdownMenuTrigger asChild>
+              <Button variant="outline">Filter</Button>
+            </DropdownMenuTrigger>
+            <DropdownMenuContent className="w-56">
+              <DropdownMenuLabel>Exercises</DropdownMenuLabel>
+              <DropdownMenuSeparator />
+              <DropdownMenuRadioGroup
+                value={selectedFilter}
+                onValueChange={setSelectedFilter}
+              >
+                {exerciseTypes.map((e) => (
+                  <DropdownMenuRadioItem
+                    value={e.value}
+                    key={e.value}
+                    onClick={() => {
+                      filterExercises(e.value);
+                    }}
+                  >
+                    {e.label}
+                  </DropdownMenuRadioItem>
+                ))}
+              </DropdownMenuRadioGroup>
+            </DropdownMenuContent>
+          </DropdownMenu>
         </div>
       </div>
       <div className="flex flex-col gap-10">
