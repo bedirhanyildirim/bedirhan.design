@@ -60,7 +60,7 @@ export default function ThemeSport() {
             <DropdownMenuTrigger asChild>
               <Button variant="outline">Filter</Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent className="w-56">
+            <DropdownMenuContent className="w-56" align="end">
               <DropdownMenuLabel>Exercises</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuRadioGroup
