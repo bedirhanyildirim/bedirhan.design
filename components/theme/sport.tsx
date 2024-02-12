@@ -49,19 +49,19 @@ export default function ThemeSport() {
 
   return (
     <>
-      <div className="mb-8 md:mb-4 lg:mb-8 flex items-center">
+      <div className="mb-4 md:mb-8 gap-4 md:gap-0 flex flex-col md:flex-row items-center">
         <h3 className="w-full flex justify-center text-xl text-black dark:text-white md:block">
           <span className="font-bold text-title mr-1 md:mr-0">
-            {sportHistory.length}
+            {exercises.length}
           </span> exercises in 2024
         </h3>
-        <div className="">
+        <div className="ml-auto md:ml-0">
           <DropdownMenu>
             <DropdownMenuTrigger asChild>
-              <Button variant="outline">Filter</Button>
+              <Button variant="ghost">Filter</Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent className="w-56" align="end">
-              <DropdownMenuLabel>Exercises</DropdownMenuLabel>
+              <DropdownMenuLabel>Exercise Type</DropdownMenuLabel>
               <DropdownMenuSeparator />
               <DropdownMenuRadioGroup
                 value={selectedFilter}
