@@ -71,4 +71,10 @@ export const sportHistory: ISport[] = [
     type: "boxing",
     duration: 3600,
   },
+  {
+    date: new Date(2024, 1, 14, 13, 15),
+    type: "gym",
+    duration: 4500,
+    target: "pull",
+  },
 ];
