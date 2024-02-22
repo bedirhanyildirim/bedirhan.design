@@ -94,4 +94,9 @@ export const sportHistory: ISport[] = [
     distance: 8010,
     duration: 3200,
   },
+  {
+    date: new Date(2024, 1, 22, 18, 40),
+    type: "boxing",
+    duration: 3600,
+  },
 ];
