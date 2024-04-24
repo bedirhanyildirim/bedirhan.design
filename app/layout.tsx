@@ -6,8 +6,21 @@ import { GA_ID } from "@/lib/meta";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Bedirhan Design | Portfolio",
-  description: 'Welcome to Bedirhan "bedcodes" Yildirim projects portfolio',
+  title: "Bedirhan YILDIRIM | Portfolio",
+  description: 'Welcome to Bedirhan "bedcodes" Yildirim portfolio',
+  keywords: "Bedirhan YILDIRIM",
+  openGraph: {
+    type: "website",
+    url: "https://bedirhan.design",
+    title: "Bedirhan YILDIRIM | Portfolio",
+    description: 'Welcome to Bedirhan "bedcodes" Yildirim portfolio',
+    siteName: "Bedirhan YILDIRIM | Portfolio",
+    images: [
+      {
+        url: "https://bedirhan.design/favicon.ico",
+      },
+    ],
+  },
 };
 
 export default function RootLayout({
