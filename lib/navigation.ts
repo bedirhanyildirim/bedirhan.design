@@ -7,8 +7,4 @@ export const navigation = [
     href: "/blog",
     label: "Blog",
   },
-  {
-    href: "/sport",
-    label: "Sport",
-  },
 ];

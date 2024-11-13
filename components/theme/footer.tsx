@@ -1,5 +1,5 @@
 "use client";
-import { Github, Linkedin, Twitter, Moon, Sun } from "lucide-react";
+import { Github, Linkedin, Twitter, Moon, Sun, Instagram } from "lucide-react";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { Button } from "@/components/ui/button";
@@ -54,6 +54,13 @@ function SocialsList() {
         <Link href="https://www.twitter.com/bedcodes" target="_blank">
           <Button variant="ghost" size="icon">
             <Twitter className="text-zinc-500 dark:text-zinc-400" />
+          </Button>
+        </Link>
+      </li>
+      <li>
+        <Link href="https://www.instagram.com/bedcodes" target="_blank">
+          <Button variant="ghost" size="icon">
+            <Instagram className="text-zinc-500 dark:text-zinc-400" />
           </Button>
         </Link>
       </li>
